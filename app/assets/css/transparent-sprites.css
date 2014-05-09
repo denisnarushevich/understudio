@@ -1,0 +1,19 @@
+/* ----------------------------------------------------
+   created with http://www.texturepacker.com 
+   ----------------------------------------------------
+   $TexturePacker:SmartUpdate:b50cdd896036a4a08967adff4d490aa0$
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.transparent-sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url("/img/transparent-sprites.png");}
+
+.fb {width:197px; height:198px; background-position: -413px -0px}
+.logo {width:203px; height:163px; background-position: -610px -0px}
+.mail {width:216px; height:211px; background-position: -0px -0px}
+.menu-triangle {width:63px; height:33px; background-position: -610px -163px}
+.naar {width:197px; height:198px; background-position: -216px -0px}

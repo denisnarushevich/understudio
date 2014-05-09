@@ -1,0 +1,926 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    outline: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: DINCondensed;
+    src: url("/fonts/DINCondensed.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: KozGoPro;
+    src: url("/fonts/KozGoPro-Regular.otf");
+    font-weight: normal;
+}
+
+
+
+
+html {
+    height: 100%;
+}
+
+body {
+    background: url("/img/big-bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+}
+
+#nav {
+    height: 61px;
+    background-color: black;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
+}
+
+#nav > .logoBox {
+    display: block;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    width: 10%;
+}
+
+#nav > .logoBox > img {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+#nav > .logoBox > img[logo2] {
+    display: none;
+}
+
+#nav > .logoBox:hover > img[logo1] {
+    display: none;
+}
+
+#nav > .logoBox:hover > img[logo2] {
+    display: block;
+}
+
+
+#nav .menu {
+    padding-top: 16px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#nav .menu a {
+    display: inline-block;
+    margin: 0px 32px;
+    line-height: 40px;
+    height: 40px;
+    font-family: DINCondensed;
+    font-size: 32px;
+    color: #663300;
+}
+
+#nav .menu a:hover, #nav .menu a[active] {
+    color: #cc9966;
+}
+
+#nav .social {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    text-align: right;
+}
+  /*
+#nav .social a {
+    display: block;
+    float: left;
+    height: 32px;
+    width: 32px;
+    margin: 0px 2px;
+}
+
+#nav .social a:hover {
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    cursor: pointer;
+}
+*/
+
+#nav .rail {
+    position: absolute;
+    bottom: -33px;
+    height: 33px;
+    width: 100%;
+}
+
+#nav .rail .triangle {
+    display: block;
+    position: absolute;
+    left: 680px;
+    opacity: 0;
+    transition: opacity .8s;
+    -webkit-transition: opacity .8s;
+    -moz-transition: opacity .8s;
+    -ms-transition: opacity .8s;
+    -o-transition: opacity .8s;
+    width: 63px;
+    height: 33px;
+    margin-left: -32px;
+
+    background-image: url("../img/menu-triangle.png");
+}
+
+#nav .rail .triangle[active] {
+    opacity: 1;
+}
+
+
+
+
+#pages {
+    top: 61px;
+    bottom: 0px;
+    width: 100%;
+    position: absolute;
+    overflow-y: hidden;
+}
+
+#pages .page {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity .8s;
+    -webkit-transition: opacity .8s;
+    -moz-transition: opacity .8s;
+    -o-transition: opacity .8s;
+}
+
+#pages .page[active] {
+    opacity: 1;
+}
+
+
+#main .steven {
+    height: 100%;
+    position: relative;
+    left: -64px;
+    animation: steven 16s ease-in-out 0s infinite alternate;
+    -webkit-animation: steven 16s ease-in-out 0s infinite alternate;
+    -moz-animation: steven 16s ease-in-out 0s infinite alternate;
+    -ms-animation: steven 16s ease-in-out 0s infinite alternate;
+    -o-animation: steven 16s ease-in-out 0s infinite alternate;
+}
+
+/*
+@keyframes steven
+{
+    0% {
+        transform: translate(-64px,0px);
+        -webkit-transform: translate(-64px,0px);
+        -moz-transform: translate(-64px,0px);
+        -ms-transform: translate(-64px,0px);
+        -o-transform: translate(-64px,0px);
+    }
+    100% {
+        transform: translate(64px,0px);
+        -webkit-transform: translate(64px,0px);
+        -moz-transform: translate(64px,0px);
+        -ms-transform: translate(64px,0px);
+        -o-transform: translate(64px,0px);
+    }
+}
+
+@-webkit-keyframes steven
+{
+    0% {
+        transform: translate(-64px,0px);
+        -webkit-transform: translate(-64px,0px);
+        -moz-transform: translate(-64px,0px);
+        -ms-transform: translate(-64px,0px);
+        -o-transform: translate(-64px,0px);
+    }
+    100% {
+        transform: translate(64px,0px);
+        -webkit-transform: translate(64px,0px);
+        -moz-transform: translate(64px,0px);
+        -ms-transform: translate(64px,0px);
+        -o-transform: translate(64px,0px);
+    }
+}
+
+@-moz-keyframes steven
+{
+    0% {
+        transform: translate(-64px,0px);
+        -webkit-transform: translate(-64px,0px);
+        -moz-transform: translate(-64px,0px);
+        -ms-transform: translate(-64px,0px);
+        -o-transform: translate(-64px,0px);
+    }
+    100% {
+        transform: translate(64px,0px);
+        -webkit-transform: translate(64px,0px);
+        -moz-transform: translate(64px,0px);
+        -ms-transform: translate(64px,0px);
+        -o-transform: translate(64px,0px);
+    }
+}
+
+@-o-keyframes steven
+{
+    0% {
+        transform: translate(-64px,0px);
+        -webkit-transform: translate(-64px,0px);
+        -moz-transform: translate(-64px,0px);
+        -ms-transform: translate(-64px,0px);
+        -o-transform: translate(-64px,0px);
+    }
+    100% {
+        transform: translate(64px,0px);
+        -webkit-transform: translate(64px,0px);
+        -moz-transform: translate(64px,0px);
+        -ms-transform: translate(64px,0px);
+        -o-transform: translate(64px,0px);
+    }
+}
+*/
+
+#main .steven > img {
+    height: 100%;
+    position: absolute;
+}
+
+#main .steven > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes cigarette
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes cigarette
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-o-keyframes cigarette
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-moz-keyframes cigarette
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#main .steven > .cigarette > img {
+    display: block;
+    height: 100%;
+    position: absolute;
+}
+
+#main .steven > .cigarette > .siga2 {
+    animation: cigarette 3s ease 0s infinite alternate;
+    -moz-animation: cigarette 3s ease 0s infinite alternate;
+    -ms-animation: cigarette 3s ease 0s infinite alternate;
+    -o-animation: cigarette 3s ease 0s infinite alternate;
+    -webkit-animation: cigarette 3s ease 0s infinite alternate;
+}
+
+#main .steven > .smokes > img.smoke {
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    opacity: 0;
+}
+
+#main .steven > .smokes > img.smoke1 {
+    animation: smoke 10s linear 0s infinite normal;
+    -moz-animation: smoke 10s linear 0s infinite normal;
+    -ms-animation: smoke 10s linear 0s infinite normal;
+    -o-animation: smoke 10s linear 0s infinite normal;
+    -webkit-animation: smoke 10s linear 0s infinite normal;
+}
+
+#main .steven > .smokes > img.smoke2 {
+    animation: smoke 12s linear 1s infinite normal;
+    -moz-animation: smoke 12s linear 1s infinite normal;
+    -ms-animation: smoke 12s linear 1s infinite normal;
+    -o-animation: smoke 12s linear 1s infinite normal;
+    -webkit-animation: smoke 12s linear 1s infinite normal;
+}
+
+#main .steven > .smokes > img.smoke3 {
+    animation: smoke 14s linear 2s infinite normal;
+    -moz-animation: smoke 14s linear 2s infinite normal;
+    -ms-animation: smoke 14s linear 2s infinite normal;
+    -o-animation: smoke 14s linear 2s infinite normal;
+    -webkit-animation: smoke 14s linear 2s infinite normal;
+}
+
+#main .steven > .smokes > img.smoke4 {
+    animation: smoke 12s linear 1s infinite normal;
+    -moz-animation: smoke 10s linear 3s infinite normal;
+    -ms-animation: smoke 10s linear 3s infinite normal;
+    -o-animation: smoke 10s linear 3s infinite normal;
+    -webkit-animation: smoke 10s linear 3s infinite normal;
+}
+
+#main .steven > .smokes > img.smoke5 {
+    animation: smoke 12s linear 4s infinite normal;
+    -moz-animation: smoke 12s linear 4s infinite normal;
+    -ms-animation: smoke 12s linear 4s infinite normal;
+    -o-animation: smoke 12s linear 4s infinite normal;
+    -webkit-animation: smoke 12s linear 4s infinite normal;
+}
+
+#main .steven > .smokes > img.smoke6 {
+    animation: smoke 14s linear 5s infinite normal;
+    -moz-animation: smoke 14s linear 5s infinite normal;
+    -ms-animation: smoke 14s linear 5s infinite normal;
+    -o-animation: smoke 14s linear 5s infinite normal;
+    -webkit-animation: smoke 14s linear 5s infinite normal;
+}
+
+       /*
+@keyframes smoke {
+    0% {
+        opacity: 0;
+        transform: translate(0%,-5%);
+        -webkit-transform: translate(0%,-5%);
+        -moz-transform: translate(0%,-5%);
+        -ms-transform: translate(0%,-5%);
+        -o-transform: translate(0%,-5%);
+    }
+    50% {
+        opacity: .75;
+        transform: translate(-10%,-5%);
+        -webkit-transform: translate(-10%,-5%);
+        -moz-transform: translate(-10%,-5%);
+        -ms-transform: translate(-10%,-5%);
+        -o-transform: translate(-10%,-5%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-20%,-10%);
+        -webkit-transform: translate(-20%,-10%);
+        -moz-transform: translate(-20%,-10%);
+        -ms-transform: translate(-20%,-10%);
+        -o-transform: translate(-20%,-10%);
+    }
+}    */
+
+@keyframes smoke
+{
+    0% {
+        opacity: 0;
+        left: 0%;
+        top: -5%;
+    }
+    50% {
+        opacity: .75;
+        top: -5%;
+    }
+    100% {
+        opacity: 0;
+        left: -20%;
+        top: -10%;
+    }
+}
+
+@-webkit-keyframes smoke
+{
+    0% {
+        opacity: 0;
+        left: 0%;
+        top: -5%;
+    }
+    50% {
+        opacity: .75;
+        top: -5%;
+    }
+    100% {
+        opacity: 0;
+        left: -20%;
+        top: -10%;
+    }
+}
+
+@-moz-keyframes smoke
+{
+    0% {
+        opacity: 0;
+        left: 0%;
+        top: -5%;
+    }
+    50% {
+        opacity: .75;
+        top: -5%;
+    }
+    100% {
+        opacity: 0;
+        left: -20%;
+        top: -10%;
+    }
+}
+
+@-o-keyframes smoke
+{
+    0% {
+        opacity: 0;
+        left: 0%;
+        top: -5%;
+    }
+    50% {
+        opacity: .75;
+        top: -5%;
+    }
+    100% {
+        opacity: 0;
+        left: -20%;
+        top: -10%;
+    }
+}
+
+
+
+
+#main .title {
+    width: 40%;
+    position: absolute;
+    right: -100%;
+    top: 0%;
+    bottom: 0%;
+    margin: auto;
+
+    transition: right .8s ease-in-out 1s;
+    -webkit-transition: right .8s ease-in-out 1s;
+    -moz-transition: right .8s ease-in-out 1s;
+    -o-transition: right .8s ease-in-out 1s;
+}
+
+#main .title[active] {
+    right: 12%;
+}
+
+
+
+
+
+#trailer {
+
+}
+
+#trailer .playerWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -225px -400px;
+    width: 800px;
+    height: 450px;
+
+    box-shadow: 0px 4px 4px #111;
+}
+
+
+
+
+#characters {
+
+}
+
+#characters .overlay {
+    height: 87.5%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+}
+
+#characters .overlay .bg {
+    position: absolute;
+    top: 12%;
+    bottom: -4px;
+    width: 100%;
+    border-top: 4px solid #371e0d;
+    border-bottom: 4px solid #371e0d;
+}
+
+#characters .overlay .bg img {
+    height: 100%;
+    width: 100%;
+}
+
+#characters .chars {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#characters .chars .char {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 100%;
+    opacity: 0;
+
+    transition-property: left, opacity;
+    -webkit-transition-property: left, opacity;
+    -moz-transition-property: left, opacity;
+    -ms-transition-property: left, opacity;
+    -o-transition-property: left, opacity;
+
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -ms-transition-duration: 1s;
+    -o-transition-duration: 1s;
+}
+
+#characters .chars .char[active]{
+    opacity: 1;
+    left: 0%;
+    transition: left 1s;
+    -webkit-transition: left 1s;
+    -moz-transition: left 1s;
+    -ms-transition: left 1s;
+    -o-transition: left 1s;
+}
+
+#characters .chars .char .image {
+    position: absolute;
+    left: 5%;
+    bottom: 0%;
+    height: 100%;
+    z-index: 33;
+}
+
+#characters .chars .char .name {
+    position: absolute;
+    left: 35%;
+    top: 25%;
+    z-index: 32;
+}
+
+#characters .chars .char .name .text {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    color: #fff;
+    font-family: DINCondensed;
+    font-size: 45px;
+    white-space: nowrap;
+    z-index: 32;
+}
+
+#characters .chars .char .name .shadow {
+    display: block;
+    position: absolute;
+    left: -70px;
+    top: -70px;
+    color: #381f15;
+    font-family: DINCondensed;
+    font-size: 128px;
+    z-index: 31;
+    white-space: nowrap;
+}
+
+#characters .chars .char > .text {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    width: 40%;
+    max-height: 45%;
+    border: 2px solid #000;
+    background-color: #e3ceb2;
+    color: #2f1a11;
+    padding: 24px;
+    font-size: 22px;
+    font-family: DINCondensed;
+    overflow-y: auto;
+    z-index: 33;
+}
+
+#characters .chars .char.jj .name {
+    left: 39%;
+}
+
+#characters .chars .char.jj .name .shadow {
+    left: -30px;
+}
+
+#characters .chars .char.bogard .name {
+    left: 38%;
+}
+
+#characters .chars .char.bogard .name .shadow {
+    left: -30px;
+}
+
+
+#characters .charIcons {
+    position: absolute;
+    bottom: 0%;
+    height: 12.5%;
+    width: 100%;
+}
+
+#characters .charIcons .wrapper {
+    height: 64%;
+    top: 20%;
+    width: 100%;
+    left: 0%;
+    position: absolute;
+    text-align: center;
+}
+
+#characters .charIcons .item {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+}
+
+#characters .charIcons .item:hover {
+    cursor: pointer;
+}
+
+#characters .charIcons .item img {
+    height: 100%;
+}
+
+#characters .charIcons .item  {
+    background: url("../img/1.png");
+    background-size: 100% 200%;
+}
+
+#characters .charIcons .spacer {
+    width: 2.4%;
+    display: inline-block;
+}
+
+#characters .charIcons .item:hover  {
+    background-position: 0% 100%;
+}
+
+#characters .charIcons .item[key="jane"] {
+    background-image: url("../img/2.png");
+}
+
+#characters .charIcons .item[key="mc"] {
+    background-image: url("../img/3.png");
+}
+
+#characters .charIcons .item[key="jj"] {
+    background-image: url("../img/4.png");
+}
+
+#characters .charIcons .item[key="bogard"] {
+    background-image: url("../img/5.png");
+}
+
+
+#gallery {
+
+}
+
+#gallery .wrapper {
+    width: 910px;
+    height: 510px;
+    margin: -255px -455px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+#gallery .screen {
+    width: 800px;
+    height: 450px;
+    background-color: #603724;
+    box-shadow: 0px 4px 4px #111;
+    position: relative;
+}
+
+#gallery .screen img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    opacity: 0;
+}
+
+#gallery .screen img[active] {
+    opacity: 1
+}
+
+#gallery .stages {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 79px;
+    height: 450px;
+}
+
+#gallery .stages a {
+    background-color: #603724;
+    height: 79px;
+    width: 79px;
+    display: block;
+    box-shadow: 0px 4px 4px #111;
+    cursor: pointer;
+    position: relative;
+}
+
+#gallery .stages a:first-child + a {
+    position: absolute;
+    margin: -40px 0px;
+    top: 50%;
+}
+
+#gallery .stages a:first-child + a + a{
+    position: absolute;
+    bottom: 0%;
+}
+
+#gallery .stages a img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 1s 0s;
+    -webkit-transition: opacity 1s 0s;
+    -moz-transition: opacity 1s 0s;
+    -ms-transition: opacity 1s 0s;
+    -o-transition: opacity 1s 0s;
+}
+
+#gallery .stages a img[active] {
+    opacity: 1;
+}
+
+#gallery .sets {
+    position: absolute;
+    width: 800px;
+    height: 35px;
+    bottom: 0px;
+    left: 0%;
+    text-align: center;
+}
+
+#gallery .sets a {
+    display: inline-block;
+    background-color: #603724;
+    margin: 0px 22px;
+    height: 35px;
+    width: 35px;
+    box-shadow: 0px 4px 4px #111;
+}
+
+#gallery .sets a:hover, #gallery .sets a[active] {
+    background: #ffc12d;
+    cursor: pointer;
+}
+
+
+
+
+
+#contacts .wrapper {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#contacts .wrapper:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+#contacts .container {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    position: relative;
+}
+
+#contacts .container img {
+    width: 100%;
+}
+
+#contacts .container a {
+    transition: all 0s .5s;
+    -webkit-transition: all 0s .5s;
+    -moz-transition: all 0s .5s;
+    -ms-transition: all 0s .5s;
+    -o-transition: all 0s .5s;
+}
+
+#contacts .container a:first-child {
+    display: block;
+    width: 20%;
+    position: relative;
+    left: -100%;
+
+
+}
+
+#contacts[active] .container a:first-child {
+    left: 0%;
+    transition: all .7s 0.6s;
+    -webkit-transition: all .7s 0.6s;
+    -moz-transition: all .7s 0.6s;
+    -ms-transition: all .7s 0.6s;
+    -o-transition: all .7s 0.6s;
+}
+
+#contacts .container a:first-child + a{
+    display: block;
+
+    width: 20%;
+    position: absolute;
+    left: 40%;
+    top: 800%;
+}
+
+#contacts[active] .container a:first-child + a {
+    top: 0%;
+    transition: all .7s 0.6s;
+    -webkit-transition: all .7s 0.6s;
+    -moz-transition: all .7s 0.6s;
+    -ms-transition: all .7s 0.6s;
+    -o-transition: all .7s 0.6s;
+}
+
+#contacts .container a:first-child + a + a {
+    display: block;
+
+    width: 20%;
+    position: absolute;
+    right: -100%;
+    top: 0%;
+}
+
+#contacts[active] .container a:first-child + a + a {
+    right: 0%;
+    transition: all .7s 0.6s;
+    -webkit-transition: all .7s 0.6s;
+    -moz-transition: all .7s 0.6s;
+    -ms-transition: all .7s 0.6s;
+    -o-transition: all .7s 0.6s;
+}
+/*
+#contacts .wrapper a:hover {
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    cursor: pointer;
+}
+*/
+
+
+
+
+
+
+
+
+
+

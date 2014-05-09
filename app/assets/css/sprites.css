@@ -1,0 +1,27 @@
+/* ----------------------------------------------------
+   created with http://www.texturepacker.com 
+   ----------------------------------------------------
+   $TexturePacker:SmartUpdate:4f05ef69c49fb9bfd6397d383802257d$
+   ----------------------------------------------------
+
+   usage: <span class="{-spritename-} sprite"></span>
+
+   replace {-spritename-} with the sprite you like to use
+
+*/
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url("/img/sprites.jpg");}
+
+.bog-icon {width:68px; height:68px; background-position: -79px -160px}
+.icon-be {width:32px; height:32px; background-position: -215px -128px}
+.icon-fb {width:32px; height:32px; background-position: -215px -96px}
+.icon-pin {width:32px; height:32px; background-position: -215px -64px}
+.icon-tw {width:32px; height:32px; background-position: -215px -32px}
+.icon-vi {width:32px; height:32px; background-position: -215px -0px}
+.jj-icon {width:68px; height:68px; background-position: -147px -68px}
+.jp-icon {width:68px; height:68px; background-position: -79px -68px}
+.mc-icon {width:68px; height:68px; background-position: -147px -0px}
+.sh-icon {width:68px; height:68px; background-position: -79px -0px}
+.stage-1 {width:79px; height:79px; background-position: -0px -158px}
+.stage-2 {width:79px; height:79px; background-position: -0px -79px}
+.stage-3 {width:79px; height:79px; background-position: -0px -0px}
