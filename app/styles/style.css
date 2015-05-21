@@ -11,13 +11,13 @@ a {
 
 @font-face {
     font-family: DINCondensed;
-    src: url("/fonts/DINCondensed.ttf");
+    src: url("../fonts/DINCondensed.ttf");
     font-weight: normal;
 }
 
 @font-face {
     font-family: KozGoPro;
-    src: url("/fonts/KozGoPro-Regular.otf");
+    src: url("../fonts/KozGoPro-Regular.otf");
     font-weight: normal;
 }
 
@@ -29,7 +29,7 @@ html {
 }
 
 body {
-    background: url("/img/big-bg.jpg") no-repeat center center fixed;
+    background: url("../img/big-bg.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
